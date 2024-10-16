@@ -1,0 +1,1500 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  color: #222222;
+  overflow-x: hidden;
+}
+
+/* Заголовок */
+.top-header {
+  background-color: #202020;
+  padding: 30px 0;
+  text-align: left;
+  color: #fff;
+}
+
+.top-header h1 {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+}
+
+.orange-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #f79f24;
+  border-radius: 50%;
+  margin-left: 1px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Меню */
+nav {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: bold;
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 20px 20px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #fff;
+  background-color: #f79f24;
+  text-decoration: none;
+}
+
+/* Форма пошуку */
+.search-form {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  position: relative;
+}
+
+.search-form input {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  width: 170px;
+  padding: 7px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.search-form input:focus {
+  border-color: #686868;
+}
+
+.search-form button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 7px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.search-form button img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Соціальні мережі */
+.social-icons {
+  display: flex;
+  gap: 3px;
+  margin-left: auto;
+}
+
+.social-icons img {
+  width: 35px;
+  height: 35px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* Зв'язок */
+.contact-info {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  gap: 70px;
+}
+
+.contact-info div {
+  display: flex;
+  align-items: center;
+}
+
+.contact-info div:first-child {
+  margin-left: 320px;
+}
+
+.contact-info img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.contact-info div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact-info span {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #707070;
+}
+
+.contact-info span:last-child {
+  font-size: 14px;
+  margin-top: 5px;
+  color: #ccc;
+}
+
+/* Секція Home */
+#home {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.image-container {
+  display: none;
+}
+
+.slider {
+  display: flex;
+  width: 100%;
+  transition: transform 0.8s ease;
+}
+
+.slide {
+  flex: 0 0 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center 35%;
+}
+
+.home-content {
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: white;
+  max-width: 600px;
+  position: absolute;
+  left: 100px;
+}
+
+.dots {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #f79f24;
+}
+
+#home h1 {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 43px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  margin: 0 0 20px 0;
+}
+
+#home p {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  font-size: 19px;
+  margin: 0 0 5px 0;
+}
+
+#home .home-content p {
+  color: #f79f24;
+  text-transform: uppercase;
+}
+
+#home .btn {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 15px;
+  padding: 14px 20px;
+  background-color: #f79f24;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+#home .btn:hover {
+  background-color: #e58d1e;
+}
+
+.info-container {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: -40px;
+  z-index: 2;
+}
+
+.home-info {
+  background-color: #0649cb;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  width: 700px;
+  font-size: 23px;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  margin-left: 100px;
+  margin-right: 20px;
+}
+
+.white-text {
+  color: white;
+}
+
+.gray-text {
+  color: #5388DD;
+}
+
+.new-info {
+  background-color: #f79f24;
+  color: #202020;
+  width: 300px;
+  font-size: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.new-info:hover {
+  background-color: #0062CC;
+}
+
+/* Секція Services */
+#services {
+  padding: 140px 0;
+  background-color: #ffffff;
+}
+
+.services-container {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.services-description {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #f79f24;
+}
+
+.services-heading {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-size: 30px;
+  color: #202020;
+  margin-top: -15px;
+  margin-bottom: 80px;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.service-block {
+  background-color: white;
+  padding: 15px;
+  width: calc(33.33% - 40px);
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.service-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-block h3 {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  margin: 0 0 -4px;
+  font-size: 20px;
+  color: #202020;
+}
+
+.service-block p {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-size: 15px;
+  color: #707070;
+}
+
+.service-block a {
+  width: 80px;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #202020;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.service-block a:hover {
+  color: #0649cb;
+}
+
+.service-img {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Секція About */
+#about {
+  background-color: #F8F9FD;
+}
+
+.about-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.about-image {
+  display: flex;
+  flex: 2;
+  align-items: flex-start;
+  margin-right: 50px;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+}
+
+.about-content {
+  flex: 2;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-content h2 {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #f79f24;
+  margin: 50px 0;
+}
+
+.about-content h3 {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-size: 30px;
+  color: #202020;
+  margin: -40px 0;
+}
+
+.about-content p {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-size: 16px;
+  color: #707070;
+  margin: 70px 0 15px;
+}
+
+.about-buttons {
+  display: flex;
+  gap: 7px;
+  margin: 25px 0 20px;
+}
+
+.about-button {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #202020;
+  border: none;
+  padding: 13px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.about-button.active {
+  background-color: #0649cb;
+  color: #ffffff;
+}
+
+.about-text {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-size: 16px;
+  color: #707070;
+  margin-top: 6px;
+  transition: opacity 0.5s ease;
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.gray-rectangle {
+  background-color: #202020;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-block {
+  text-align: center;
+  margin: 0 40px;
+  padding: 20px;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+}
+
+.text-block span {
+  color: #f79f24;
+  margin: 5px 0;
+  font-size: 36px;
+}
+
+.text-block p {
+  color: #ccc;
+  margin: 5px 0;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+/* Секція Contact */
+#contact {
+  padding: 0;
+  height: 90vh;
+}
+
+.contact-container {
+  display: flex;
+  height: 100%;
+}
+
+.contact-image {
+  flex: 1;
+  background-color: #ddd;
+}
+
+.contact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #f79f24;
+  margin: 0 auto;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.contact-form span {
+  font-size: 13px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: -15px;
+}
+
+.contact-form h2 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  width: 70%;
+}
+
+.form-group select,
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  box-sizing: border-box;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  resize: none;
+}
+
+.form-row {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+  margin-bottom: 20px;
+  width: 70%;
+}
+
+.form-row input,
+.form-row select {
+  width: 100%;
+  padding: 15px;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border: none;
+}
+
+.date-container,
+.time-container {
+  position: relative;
+  width: 100%;
+}
+
+.calendar-icon,
+.clock-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+}
+
+.form-button {
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  background-color: #2e3439;
+  color: #fff;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  text-transform: uppercase;
+  width: 70%;
+  transition: background-color 0.3s;
+}
+
+.form-button:hover {
+  background-color: #23272B;
+}
+
+/* Секція Project*/
+#project {
+  background-color: #F8F9FD;
+  padding: 90px 170px;
+  text-align: center;
+}
+
+.project-intro p {
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 13px;
+  margin-bottom: -20px;
+}
+
+.project-intro h2 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+  font-size: 28px;
+}
+
+.testimonial-slider {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  gap: 30px;
+  padding: 60px 30px;
+}
+
+.testimonial-item {
+  position: relative;
+  flex: 0 0 30%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.01);
+  scroll-snap-align: start;
+}
+
+.testimonial-item img.small-icon {
+  width: 37px;
+  height: 37px;
+  position: absolute;
+  top: -20px;
+  left: 23px;
+}
+
+.testimonial-item .testimonial-text {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-size: 16px;
+  color: #707070;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.person-info {
+  display: flex;
+  align-items: center;
+}
+
+.person-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.person-details {
+  text-align: left;
+}
+
+.person-name {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.person-position {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-size: 16px;
+  color: #666;
+  margin-top: -15px;
+}
+
+.testimonial-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: -20px;
+}
+
+.testimonial-dot {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.testimonial-dot.active {
+  background-color: #f79f24;
+}
+
+.testimonial-slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* Секція Blog*/
+#blog {
+  padding: 40px 100px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.blog-heading p {
+  font-size: 14px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #f79f24;
+}
+
+.blog-heading h2 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+  font-size: 28px;
+  margin-top: -10px;
+  margin-bottom: 70px;
+}
+
+.blog-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.blog-item {
+  width: 30%;
+  box-sizing: border-box;
+  margin: 18px;
+}
+
+.blog-item img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.blog-info {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.blog-info .worker-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.blog-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: "Nunito", sans-serif;
+}
+
+.blog-text p {
+  font-weight: 700;
+  font-size: 15px;
+  color: #707070;
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+.blog-text span {
+  font-weight: 700;
+  font-size: 15px;
+  color: #0649cb;
+}
+
+.blog-description {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 15px;
+  color: #333;
+  text-align: left;
+}
+
+/* Мобільні стилі */
+@media (max-width: 768px) {
+  .top-header {
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .top-header h1 {
+    font-size: 24px;
+  }
+
+  .contact-info {
+    margin-right: 0;
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .contact-info div:first-child {
+    margin-left: 0;
+  }
+
+  .contact-info span {
+    font-size: 14px;
+  }
+
+  .contact-info span:last-child {
+    text-align: left;
+    font-size: 12px;
+  }
+
+  .social-icons {
+    margin-left: 0;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul li {
+    display: block;
+    width: 100%;
+  }
+
+  nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .search-form {
+    display: none;
+  }
+
+  .info-container {
+    flex-direction: column;
+    bottom: -190px;
+    width: 100%;
+  }
+
+  .home-info,
+  .new-info {
+    width: 100%;
+  }
+
+  .home-info {
+    padding: 15px 0;
+  }
+
+  .slider {
+    display: none;
+  }
+
+  .image-container {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .image-container img.active {
+    opacity: 1;
+  }
+
+  .services-container {
+    margin-top: 160px;
+  }
+
+  .services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+    gap: 25px;
+  }
+
+  .service-block {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0;
+    gap: 10px;
+  }
+
+  .service-block:last-child {
+    margin-bottom: 0;
+  }
+
+  #services {
+    padding: 90px 0;
+  }
+
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-image {
+    flex: none;
+    margin-right: 0;
+    width: 100%;
+    order: 1;
+  }
+
+  .about-content {
+    order: 2;
+    padding: 0 20px;
+  }
+
+  .about-buttons {
+    order: 3;
+    margin: 20px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .about-text {
+    order: 4;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .gray-rectangle {
+    flex-direction: column;
+  }
+
+  .text-block {
+    margin: 20px 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px;
+  }
+
+  #contact {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .contact-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .contact-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .contact-form {
+    background-color: rgba(247, 157, 36, 0.8);
+    position: relative;
+    z-index: 2;
+    padding: 60px 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .form-group {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .form-row {
+    width: 100%;
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .form-row input {
+    margin-bottom: 15px;
+  }
+
+  .date-container, .time-container {
+    position: relative;
+    width: 100%;
+  }
+
+  select,
+  input[type="date"],
+  input[type="time"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 15px;
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 30px;
+    position: relative;
+  }
+
+  .calendar-icon, .clock-icon {
+    top: 40%;
+    pointer-events: none;
+  }
+
+  textarea {
+    width: 100%;
+    height: 150px;
+    resize: none;
+  }
+
+  .form-button {
+    width: 100%;
+    font-family: "Nunito", sans-serif;
+    font-weight: 800;
+    background-color: #2e3439;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+  }
+
+  #project {
+    padding: 60px 20px;
+  }
+
+  .testimonial-slider {
+    display: flex;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    padding: 30px 20px;
+  }
+
+  .testimonial-item {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+  }
+
+  .testimonial-item:nth-child(n+6) {
+    display: none;
+  }
+
+  .testimonial-dots {
+    margin-top: 0;
+  }
+
+  #blog {
+    padding: 20px 20px;
+  }
+
+  .blog-heading h2 {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+
+  .blog-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blog-item {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .blog-info {
+    justify-content: flex-start;
+  }
+
+  .blog-description {
+    font-size: 17px;
+    text-align: left;
+  }
+}
+
+/* Стилі для планшетів */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .top-header {
+    text-align: center;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .contact-info {
+    margin-right: 0;
+    padding: 25px;
+    
+  }
+
+  .contact-info div:first-child {
+    margin-left: 0;
+  }
+
+  .social-icons {
+    margin-left: 0;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul li {
+    display: block;
+    width: 100%;
+  }
+
+  nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .search-form {
+    display: none;
+  }
+
+  .info-container {
+    flex-direction: column;
+    bottom: -190px;
+    width: 100%;
+  }
+
+  .home-info,
+  .new-info {
+    width: 100%;
+  }
+
+  .home-info {
+    padding: 15px 0;
+  }
+
+  .slider {
+    display: none;
+  }
+
+  .image-container {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .image-container img.active {
+    opacity: 1;
+  }
+
+  .services-container {
+    margin-top: 160px;
+  }
+
+  .services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 25px;
+    gap: 25px;
+  }
+
+  .service-block {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+
+  .service-block:last-child {
+    margin-bottom: 0;
+  }
+
+  #services {
+    padding: 90px 0;
+  }
+
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-image {
+    flex: none;
+    margin-right: 0;
+    width: 100%;
+    order: 1;
+  }
+
+  .about-content {
+    order: 2;
+    padding: 0 20px;
+  }
+
+  .about-buttons {
+    order: 3;
+    margin: 20px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .about-text {
+    order: 4;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .gray-rectangle {
+    flex-direction: column;
+  }
+
+  .text-block {
+    margin: 20px 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px;
+  }
+
+  #contact {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .contact-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .contact-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .contact-form {
+    background-color: rgba(247, 157, 36, 0.8);
+    position: relative;
+    z-index: 2;
+    padding: 60px 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .form-group {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .form-row {
+    width: 100%;
+    gap: 15px;
+    margin-bottom: 0;
+  }
+
+  .form-row input {
+    margin-bottom: 15px;
+  }
+
+  .date-container, .time-container {
+    position: relative;
+    width: 100%;
+  }
+
+
+  .calendar-icon, .clock-icon {
+    top: 40%;
+    pointer-events: none;
+  }
+
+  .form-button {
+    width: 100%;
+  }
+
+  #project {
+    padding: 60px 20px;
+  }
+
+  .testimonial-slider {
+    display: flex;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    padding: 30px 45px;
+    gap: 15px;
+  }
+
+  .testimonial-item {
+    flex: 0 0 50%;
+    scroll-snap-align: start;
+  }
+
+  .testimonial-dots {
+    margin-top: 0;
+  }
+
+  #blog {
+    padding: 40px 40px;
+  }
+
+  .blog-heading h2 {
+    margin-bottom: 40px;
+  }
+
+  .blog-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blog-item {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .blog-info {
+    justify-content: flex-start;
+    margin-top: 15px;
+  }
+
+  .blog-info .worker-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .blog-text p,
+  .blog-text span {
+    font-size: 17px;
+  }
+}
